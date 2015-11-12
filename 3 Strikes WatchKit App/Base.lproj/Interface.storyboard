@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="7701"/>
+    </dependencies>
+    <scenes>
+        <!--3 Strikes-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller identifier="mainController" title="3 Strikes" id="AgC-eL-Hgc" customClass="InterfaceController">
+                    <items>
+                        <group width="1" height="0.5" alignment="left" id="au7-G5-8Yl">
+                            <items>
+                                <button width="1" height="1" alignment="left" title="Batting" id="tpg-20-F0l">
+                                    <connections>
+                                        <segue destination="jNg-8D-ZcC" kind="modal" identifier="batting" id="PWh-Rt-Uqn"/>
+                                    </connections>
+                                </button>
+                            </items>
+                        </group>
+                        <group width="1" height="0.5" alignment="left" id="hHb-nn-Suq">
+                            <items>
+                                <button width="1" height="1" alignment="left" title="Fielding" id="2rQ-IG-eZt">
+                                    <connections>
+                                        <segue destination="f26-R1-BMP" kind="modal" identifier="fielding" id="9Mj-Cr-eic"/>
+                                    </connections>
+                                </button>
+                            </items>
+                        </group>
+                    </items>
+                    <menu key="menu" id="1ue-wR-1F1">
+                        <items>
+                            <menuItem title="Reset Score" icon="trash" id="5Tv-Qv-o2D">
+                                <connections>
+                                    <action selector="resetScore" destination="AgC-eL-Hgc" id="3ns-gK-6An"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Keep Playing" icon="resume" id="2oH-57-btg" userLabel="Keep Playing">
+                                <connections>
+                                    <action selector="keepPlaying" destination="AgC-eL-Hgc" id="okr-rY-sUB"/>
+                                </connections>
+                            </menuItem>
+                        </items>
+                    </menu>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="180" y="448"/>
+        </scene>
+        <!--Dismiss-->
+        <scene sceneID="cAa-JU-e9Y">
+            <objects>
+                <controller identifier="battingController" title="Dismiss" id="jNg-8D-ZcC" customClass="BattingInterfaceController">
+                    <items>
+                        <group width="1" height="0.10000000000000001" alignment="left" id="GqJ-Lj-imG">
+                            <items>
+                                <label width="1" alignment="left" text="score" textAlignment="center" minimumScaleFactor="0.80000000000000004" id="GgZ-cR-S8u">
+                                    <fontDescription key="font" type="system" pointSize="12"/>
+                                </label>
+                            </items>
+                        </group>
+                        <group width="1" height="0.5" alignment="left" id="TgI-vS-bsA">
+                            <items>
+                                <group width="0.33000000000000002" height="1" alignment="left" layout="vertical" id="uvO-bN-sEm">
+                                    <items>
+                                        <button width="1" height="0.33000000000000002" alignment="left" title="▲" id="GQi-Kx-Emr">
+                                            <connections>
+                                                <action selector="firstUpButtonTapped" destination="jNg-8D-ZcC" id="62i-ng-bQn"/>
+                                            </connections>
+                                        </button>
+                                        <label width="1" height="0.29999999999999999" alignment="left" text="1" textAlignment="center" id="Fbn-YP-yrD">
+                                            <fontDescription key="font" style="UICTFontTextStyleHeadline"/>
+                                        </label>
+                                        <button width="1" height="0.33000000000000002" alignment="left" verticalAlignment="bottom" title="▼" id="Ief-Hk-l4h">
+                                            <connections>
+                                                <action selector="firstDownButtonTapped" destination="jNg-8D-ZcC" id="xt8-yU-sDP"/>
+                                            </connections>
+                                        </button>
+                                    </items>
+                                </group>
+                                <group width="0.33000000000000002" height="1" alignment="center" layout="vertical" id="VIl-fY-4fk">
+                                    <items>
+                                        <button width="1" height="0.33000000000000002" alignment="left" title="▲" id="bxc-a3-fu4">
+                                            <connections>
+                                                <action selector="secondUpButtonTapped" destination="jNg-8D-ZcC" id="qgQ-pJ-Goq"/>
+                                            </connections>
+                                        </button>
+                                        <label width="1" height="0.29999999999999999" alignment="left" text="2" textAlignment="center" id="ugc-kO-CXo">
+                                            <fontDescription key="font" style="UICTFontTextStyleHeadline"/>
+                                        </label>
+                                        <button width="1" height="0.33000000000000002" alignment="left" verticalAlignment="bottom" title="▼" id="AcX-fg-goY">
+                                            <connections>
+                                                <action selector="secondDownButtonTapped" destination="jNg-8D-ZcC" id="2e1-Uc-wPG"/>
+                                            </connections>
+                                        </button>
+                                    </items>
+                                </group>
+                                <group width="0.33000000000000002" height="1" alignment="right" layout="vertical" id="jY0-Od-RWT">
+                                    <items>
+                                        <button width="1" height="0.33000000000000002" alignment="left" title="▲" id="bnF-Wc-vDf">
+                                            <connections>
+                                                <action selector="thirdUpButtonTapped" destination="jNg-8D-ZcC" id="qsa-JU-8op"/>
+                                            </connections>
+                                        </button>
+                                        <label width="1" height="0.29999999999999999" alignment="left" text="3" textAlignment="center" id="0A2-vy-GXs">
+                                            <fontDescription key="font" style="UICTFontTextStyleHeadline"/>
+                                        </label>
+                                        <button width="1" height="0.33000000000000002" alignment="left" verticalAlignment="bottom" title="▼" id="tQe-Ef-FnA">
+                                            <connections>
+                                                <action selector="thirdDownButtonTapped" destination="jNg-8D-ZcC" id="rLA-kR-n2m"/>
+                                            </connections>
+                                        </button>
+                                    </items>
+                                </group>
+                            </items>
+                        </group>
+                        <group width="1" height="0.14999999999999999" alignment="left" id="Grm-I7-Ysb">
+                            <items>
+                                <label width="1" height="1" alignment="left" text="Status" textAlignment="center" minimumScaleFactor="0.70000000000000007" id="6Yj-Pu-xr8"/>
+                            </items>
+                        </group>
+                        <group width="1" height="0.25" alignment="left" id="n5y-Uh-hBh">
+                            <items>
+                                <button width="1" alignment="left" title="Hit!" id="tTI-S5-KLc">
+                                    <connections>
+                                        <action selector="hitButtonTapped" destination="jNg-8D-ZcC" id="rqw-S6-uu3"/>
+                                    </connections>
+                                </button>
+                            </items>
+                        </group>
+                    </items>
+                    <connections>
+                        <outlet property="displayStatusLabel" destination="6Yj-Pu-xr8" id="nGy-xc-Wst"/>
+                        <outlet property="firstDownButton" destination="Ief-Hk-l4h" id="TbW-hc-sLW"/>
+                        <outlet property="firstLabel" destination="Fbn-YP-yrD" id="mkO-W8-FvZ"/>
+                        <outlet property="firstUpButton" destination="GQi-Kx-Emr" id="a16-N3-kPT"/>
+                        <outlet property="hitButton" destination="tTI-S5-KLc" id="dMV-yh-mfA"/>
+                        <outlet property="scoreLabel" destination="GgZ-cR-S8u" id="13J-jZ-Bt6"/>
+                        <outlet property="secondDownButton" destination="AcX-fg-goY" id="aFZ-hd-SzI"/>
+                        <outlet property="secondLabel" destination="ugc-kO-CXo" id="8n4-b7-3SH"/>
+                        <outlet property="secondUpButton" destination="bxc-a3-fu4" id="yKa-tU-6CU"/>
+                        <outlet property="thirdDownButton" destination="tQe-Ef-FnA" id="JOE-bY-tKM"/>
+                        <outlet property="thirdLabel" destination="0A2-vy-GXs" id="6dd-3K-4rv"/>
+                        <outlet property="thirdUpButton" destination="bnF-Wc-vDf" id="Oly-ph-6pR"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="431" y="346"/>
+        </scene>
+        <!--Static Notification Interface Controller-->
+        <scene sceneID="AEw-b0-oYE">
+            <objects>
+                <notificationController id="YCC-NB-fut">
+                    <items>
+                        <label alignment="left" text="Alert Label" id="IdU-wH-bcW"/>
+                    </items>
+                    <notificationCategory key="notificationCategory" identifier="myCategory" id="JfB-70-Muf"/>
+                    <connections>
+                        <outlet property="notificationAlertLabel" destination="IdU-wH-bcW" id="JKC-fr-R95"/>
+                        <segue destination="4sK-HA-Art" kind="relationship" relationship="dynamicNotificationInterface" id="kXh-Jw-8B1"/>
+                    </connections>
+                </notificationController>
+            </objects>
+            <point key="canvasLocation" x="220" y="800"/>
+        </scene>
+        <!--Dismiss-->
+        <scene sceneID="Zu3-Zc-PNg">
+            <objects>
+                <controller identifier="fieldingController" title="Dismiss" id="f26-R1-BMP" customClass="FieldingInterfaceController">
+                    <items>
+                        <group width="1" height="0.29999999999999999" alignment="left" id="mbK-VI-whz">
+                            <items>
+                                <label width="0.29999999999999999" height="1" alignment="left" textAlignment="center" minimumScaleFactor="0.70000000000000007" id="RXD-4f-SOn">
+                                    <fontDescription key="font" type="system" pointSize="12"/>
+                                </label>
+                                <label width="0.40000000000000002" height="1" alignment="left" text="000" textAlignment="center" id="rpp-mR-isB">
+                                    <fontDescription key="font" type="boldSystem" pointSize="20"/>
+                                </label>
+                                <label width="0.29999999999999999" height="1" alignment="left" textAlignment="center" minimumScaleFactor="0.70000000000000007" id="OTv-wX-NY3">
+                                    <fontDescription key="font" type="system" pointSize="12"/>
+                                </label>
+                            </items>
+                        </group>
+                        <group width="1" height="0.40000000000000002" alignment="left" id="E9X-DZ-gPW">
+                            <items>
+                                <group width="0.33000000000000002" height="1" alignment="left" layout="vertical" id="Xy5-GS-V1e">
+                                    <items>
+                                        <label width="1" height="0.20000000000000001" alignment="left" text="Strike" textAlignment="center" id="hv5-zi-5hi">
+                                            <fontDescription key="font" style="UICTFontTextStyleFootnote"/>
+                                        </label>
+                                        <button width="1" height="0.80000000000000004" alignment="left" title="0" id="JEW-1q-2Vt">
+                                            <fontDescription key="font" type="system" pointSize="20"/>
+                                            <connections>
+                                                <action selector="strikeButtonTapped:" destination="f26-R1-BMP" id="wSb-SL-OWb"/>
+                                            </connections>
+                                        </button>
+                                    </items>
+                                </group>
+                                <group width="0.33000000000000002" height="1" alignment="center" layout="vertical" id="6Ox-mV-y4V">
+                                    <items>
+                                        <label width="1" height="0.20000000000000001" alignment="left" text="Ball" textAlignment="center" id="jqD-A4-0E2">
+                                            <fontDescription key="font" style="UICTFontTextStyleFootnote"/>
+                                        </label>
+                                        <button width="1" height="0.80000000000000004" alignment="left" title="0" id="qYP-0V-hip">
+                                            <fontDescription key="font" type="system" pointSize="20"/>
+                                            <connections>
+                                                <action selector="ballButtonTapped:" destination="f26-R1-BMP" id="Dl9-2i-zDc"/>
+                                            </connections>
+                                        </button>
+                                    </items>
+                                </group>
+                                <group width="0.33000000000000002" height="1" alignment="center" layout="vertical" id="l14-IP-HRc">
+                                    <items>
+                                        <label width="1" height="0.20000000000000001" alignment="left" text="Out" textAlignment="center" id="POc-Uj-XtH">
+                                            <fontDescription key="font" style="UICTFontTextStyleFootnote"/>
+                                        </label>
+                                        <button width="1" height="0.80000000000000004" alignment="left" title="0" id="Zb0-p4-8Xt">
+                                            <fontDescription key="font" type="system" pointSize="20"/>
+                                            <connections>
+                                                <action selector="outButtonTapped:" destination="f26-R1-BMP" id="eQE-47-w9T"/>
+                                            </connections>
+                                        </button>
+                                    </items>
+                                </group>
+                            </items>
+                        </group>
+                        <group width="1" alignment="left" layout="vertical" id="z8r-7E-di1">
+                            <items>
+                                <label width="1" height="0.30000000000000004" alignment="left" text="Status" textAlignment="center" minimumScaleFactor="0.40000000000000013" id="aZn-2K-e0V">
+                                    <fontDescription key="font" style="UICTFontTextStyleFootnote"/>
+                                </label>
+                                <button width="1" height="0.70000000000000007" alignment="left" title="Return" id="vTu-4B-G2K">
+                                    <connections>
+                                        <action selector="returnButtonTapped:" destination="f26-R1-BMP" id="6oY-gD-76g"/>
+                                    </connections>
+                                </button>
+                            </items>
+                        </group>
+                    </items>
+                    <connections>
+                        <outlet property="ballButton" destination="qYP-0V-hip" id="wSZ-Lp-6uL"/>
+                        <outlet property="bestScoreLabel" destination="RXD-4f-SOn" id="axq-14-WvJ"/>
+                        <outlet property="currentSocreLabel" destination="OTv-wX-NY3" id="yzw-OX-1BA"/>
+                        <outlet property="numberDisplayLabel" destination="rpp-mR-isB" id="UPG-BE-QGN"/>
+                        <outlet property="outButton" destination="Zb0-p4-8Xt" id="dM5-FV-QCz"/>
+                        <outlet property="returnButton" destination="vTu-4B-G2K" id="l0M-zr-zKK"/>
+                        <outlet property="statusLabel" destination="aZn-2K-e0V" id="6tl-sK-MQ6"/>
+                        <outlet property="strikeButton" destination="JEW-1q-2Vt" id="WCq-Li-QyB"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="434" y="574"/>
+        </scene>
+        <!--Notification Controller-->
+        <scene sceneID="ZPc-GJ-vnh">
+            <objects>
+                <controller id="4sK-HA-Art" customClass="NotificationController"/>
+            </objects>
+            <point key="canvasLocation" x="454" y="800"/>
+        </scene>
+    </scenes>
+</document>
