@@ -17,6 +17,10 @@ App Group
 For developers who want to know how to make an interactive iPhone and Apple Watch app/game.
 Enjoy :-)
 
+## In Korean
+
+애플와치 가지고 뭐할까 하다가 만들어 본 간단한 야구 게임입니다. 기본 동작 원리 정도를 파악하시는데 도움이 되길 바랍니다.
+
 ## The MIT License (MIT)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
